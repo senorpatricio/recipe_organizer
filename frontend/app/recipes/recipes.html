@@ -1,7 +1,6 @@
-<button class="btn btn-lg btn-danger">Click on me</button>
+<!--<button class="btn btn-lg btn-danger">Click on me</button>-->
 
 <ul>
-    <li ng-repeat="recipe in recipes">{{ recipe.name}}</li>
+    <li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id}}">{{ recipe.name}}</a></li>
 </ul>
 
-<p>this is a sentence</p>
