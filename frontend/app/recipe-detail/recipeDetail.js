@@ -18,6 +18,7 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
         $scope.recipe = recipe;
     });
 
+    //this the function to delete recipes
     $scope.deleteRecipe = function () {
         var confirmation = confirm("Are you sure you want to delete this recipe? This cannot be undone.");
 
@@ -34,12 +35,29 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
 
     };
 
+    //how to add ingredients
+    $scope.addIngredientToRecipe = function(ingredientName) {
+        if(ingredientName != null) {
+            var ingredient = {name: ingredientName};
+            $scope.recipe.ingredients.push(ingredient);
+            $scope.ingredientName = null;
+        }
+    };
+
+    $scope.removeIngredientFromRecipe = function(ingredient) {
+        var index = $scope.recipe.ingredients.indexOf(ingredient);
+        if (index != -1) {
+            $scope.recipe.ingredients.splice(index, 1);
+        }
+    };
+
     $scope.saveEditedRecipe = function() {
+        $scope.recipe.photo = null;
         Restangular.one('recipes', $scope.recipeId).customPUT($scope.recipe).then(function(){
-            alert('Your recipe was updated!');
+            toastr.success('Your recipe was updated!');
             $scope.editing = false;
         }, function(){
-            alert("Something went wrong updating the recipe...");
+            toastr.error("Something went wrong updating the recipe...");
         });
     };
 }]);

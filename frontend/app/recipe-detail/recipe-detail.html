@@ -3,6 +3,8 @@
 
 <input ng-show="editing" ng-model="recipe.name">
 
+<img ng-src=""
+
 <br>
 <p ng-hide="editing"> {{ recipe.description }}</p>
 
@@ -12,6 +14,22 @@
 <p ng-hide="editing"> {{ recipe.directions }}</p>
 
 <textarea ng-show="editing"  ng-model="recipe.directions"></textarea>
+
+<div ng-show="editing">
+    <br>
+    <label>Ingredient</label>
+    <br>
+    <input ng-model="ingredientName">
+    <button ng-click="addIngredientToRecipe(ingredientName)">Add Ingredient to Recipe</button>
+    <br>
+</div>
+
+<ol>
+    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
+        <i ng-click="removeIngredientFromRecipe(ingredient)" ng-show="editing"
+           class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
+    </li>
+</ol>
 
 <br>
 <button class="btn btn-danger"
