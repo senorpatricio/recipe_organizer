@@ -34,5 +34,26 @@
 }
 
 .site-foreground {
+    background-color: #dddddd;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.recipe-card {
+    border-radius: 5px;
     background-color: #ffffff;
+    padding: inherit;
+    padding-top: 1px;
+    margin-top: 30px;
+}
+
+.recipe-card-image {
+    width: 100%;
+}
+
+.recipe-card-description {
+    margin-top: 10px;
 }

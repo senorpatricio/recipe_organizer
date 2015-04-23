@@ -31,7 +31,10 @@
         </li>
     </ol>
 
-
+    <div class="form-group">
+        <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+           onchange="angular.element(this).scope().addPhoto()"/>
+    </div>
 
     <button ng-click="addRecipe()"
             class="btn btn-xs btn-success glyphicon glyphicon-save-file">Save Recipe</button>
