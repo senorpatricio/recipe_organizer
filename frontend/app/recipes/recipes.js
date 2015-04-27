@@ -14,3 +14,4 @@ angular.module('myApp.recipes', ['ngRoute'])
             $scope.recipes = recipes;
         }); //this makes a call to the database at http://localhost:8001/... for recipes
     }]);
+

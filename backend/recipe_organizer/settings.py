@@ -103,7 +103,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-MEDIA_ROOT = BASE_DIR + '/apps/recipe/media'
+MEDIA_ROOT = BASE_DIR + '/apps/recipes/media'
 
 MEDIA_URL = '/media/'
 
