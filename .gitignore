@@ -2,5 +2,6 @@
 *.pyc
 *.orig
 db.sqlite3
-backend/apps/recipes/media/
-/static
+/static/
+bower_components/
+media/
