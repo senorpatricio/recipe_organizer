@@ -3,14 +3,6 @@
 
 <input ng-show="editing" ng-model="recipe.name">
 
-<img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">
-
-<div class="form-group" ng-show="editing">
-    <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
-           onchange="angular.element(this).scope().addPhoto()"/>
-</div>
-
-
 <br>
 <p ng-hide="editing"> {{ recipe.description }}</p>
 
@@ -36,8 +28,16 @@
            class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
     </li>
 </ol>
+<br>
+
+<div class="form-group" ng-show="editing">
+    <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+           onchange="angular.element(this).scope().addPhoto()"/>
+</div>
+<img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">
 
 <br>
+
 <button class="btn btn-danger"
         ng-click="deleteRecipe()"> Delete Recipe </button>
 

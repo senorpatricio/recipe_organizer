@@ -52,13 +52,13 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
     };
 
     $scope.addPhoto = function () {
-        var file = document.getElementById('file').files[0],
-            reader = new FileReader();
-        reader.onload = function (e) {
-            $scope.recipe.photo = 'data:image/png;base64,' + btoa(e.target.result);
-            $scope.$apply();
-        };
-        reader.readAsBinaryString(file);
+            var file = document.getElementById('file').files[0],
+                reader = new FileReader();
+            reader.onload = function (e) {
+                $scope.recipe.photo = 'data:image/png;base64,' + btoa(e.target.result);
+                $scope.$apply();
+            };
+            reader.readAsBinaryString(file);
         };
 
 

@@ -39,11 +39,24 @@ angular.module('myApp.addRecipe', ['ngRoute'])
             reader.readAsBinaryString(file);
         };
 
+
+        //$scope.addRecipe = function () {
+        //    Restangular.all('add-recipe').customPOST($scope.recipe).then(function(recipe) {
+        //        toastr.success("You successfully added the recipe!");
+        //        $scope.recipe = {};
+        //    }, function() {
+        //        toastr.error("There was a problem adding your recipe");
+        //    });
+        //
+
         $scope.addRecipe = function () {
-            Restangular.all('add-recipe').customPOST($scope.recipe).then(function(recipe) {
-                toastr.success("You successfully added the recipe!");
+            Restangular.all('add-recipe').customPOST($scope.recipe).then(function () {
+                toastr.success("Recipe was successfully created!");
                 $scope.recipe = {};
-            }, function() {
+                $scope.recipe.photo = null;
+                document.getElementById('file').value = null;
+                $scope.$apply();
+            }, function () {
                 toastr.error("There was a problem adding your recipe");
             });
         };
