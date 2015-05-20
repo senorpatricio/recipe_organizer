@@ -50,7 +50,7 @@ angular.module('myApp.addRecipe', ['ngRoute'])
         //
 
         $scope.addRecipe = function () {
-            Restangular.all('add-recipe').customPOST($scope.recipe).then(function () {
+            Restangular.all('add-recipe/').customPOST($scope.recipe).then(function () {
                 toastr.success("Recipe was successfully created!");
                 $scope.recipe = {};
                 $scope.recipe.photo = null;

@@ -7,6 +7,8 @@ angular.module('myApp', [
     'myApp.recipeDetail',
     'myApp.addRecipe',
     'myApp.version',
+    'myApp.auth',
+    'myApp.user',
     'restangular'
 ]).
     config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
