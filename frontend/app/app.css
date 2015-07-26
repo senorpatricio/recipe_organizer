@@ -31,6 +31,8 @@
 
 .site-background {
     background-image: url('/backend/apps/recipes/media/photos/tileable_wood_texture.png');
+    -webkit-background-size: cover;
+    background-size: cover; 
 }
 
 .site-foreground {

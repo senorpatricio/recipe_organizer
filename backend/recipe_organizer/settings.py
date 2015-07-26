@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.recipes',
-    'rest_framework',
     'corsheaders',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -107,7 +107,7 @@ MEDIA_ROOT = BASE_DIR + '/apps/recipes/media'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = 'static'
+# STATIC_ROOT = 'static'
 
 STATIC_URL = '/static/'
 
@@ -117,3 +117,4 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
+# turn to False when deploying *****
